@@ -4,33 +4,32 @@ background-image: url(../images/diamond.png);
 margin:0;
 background-color: #16B0E3;
 background-position: bottom;
+width: 100vw;
 }
 header
 {
 background-color: #00000099;
-width: 100vw;
 } 
 h1{
 	font-family: 'Anton', Arial, Helvetica, sans-serif;
 	color: aqua;
-	font-size: 15rem;
+	font-size: 11em;
 }
-#logo { width: 20vw; display:block; margin:auto; } 
+#logo { width: 20vw; margin:auto; } 
 .photos{ width: 9vw;
 margin: 1%;
 
 }
 .members
 {
-	display: flex;
-	
-  	
+display: flex;
 font-weight: bold;
 background-color: #ffffffBB;
 border: 0.2vw solid white;
-margin:1vw;
-margin-left: 5vw;
-margin-right: 5vw;
+margin-bottom:0.5vh;
+margin-top:0.5vh;
+margin-left: 0.2vw;
+margin-right: 1.2vw;
 }
 .photos{
 	width: 12vw;
@@ -41,32 +40,26 @@ margin-right: 5vw;
 }
 
 
-
-
 /* version mobile*/
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 856px) {
 
 #logo{
 	width: 25vw;
 	height: 25vw;
 }
 h1{
-	font-size: 2.5rem;
+	font-size: 3rem;
 }
-
-
 .members{
-
-	height: 50vw;
+	width: 99%;
+	height: auto;
 	border: 0.5vw solid white;
 }
 .members p{
 	font-size: 3.5vw;
-	
-
 }
 audio{
 	width: 50vw;
@@ -78,7 +71,6 @@ audio{
 .photos{
 	width: 15vw;
 	height: 15vw;
-
 }
 #pause
 {

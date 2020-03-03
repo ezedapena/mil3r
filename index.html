@@ -12,86 +12,33 @@
    <!-- <script src="https://kit.fontawesome.com/672e10456a.js" crossorigin="anonymous"></script> -->
 </head>
 <body> 
-   <header class="d-flex  align-items-center">
-       <h1 class="ml-auto mr-1">TEAM</h1>
-      <img id="logo" alt="Team Miler logo" src="images/logo.png">
-      <h1 class="mr-auto ml-1">MIL3R</h1>
+   <header class="d-flex align-items-center col-12">
+        <h1 class="ml-auto mr-1">TEAM</h1>
+        <img id="logo" alt="Team Miler logo" src="images/logo.png">
+        <h1 class="mr-auto ml-1">MIL3R</h1>
   </header>
   <main>
-
-    <div id="members" >
-        <div id="zeke" class="members"> 
-            <img class="photos" id="member1Photo" alt="photo of member1" src="images/poquevola.jpg">
+    <div id="app" >
+        <div v-for="member in labels" class="members"> 
+            <img class="photos" id="memberPhoto" alt="photo of member" :src="member.ImgRute">
             <div >
-                <h2>Ezequiel "Zeke" Dapena</h2>
-                <p>Frase: "Si es imposible es posible que me convierta en una leyenda." </p>
-                <p>Cancion favorita: "Nadir - Zeballos"</p>
-                <audio controls>
-                    <source type="audio/wav" src="music/eze.mp3">
-                </audio>
-            </div>
-        </div>
-        <div id="lean" class="members"> 
-            <img class="photos" id="member1Photo 0" alt="photo of member1" src="images/poquevola.jpg">
-            <div >
-                <h2>Leandro "Lean" Álvarez</h2>
-                <p>Frase: "Sometimes the person that no one imagines capable of anything, ends up doing things that no one imagine." </p>
-                <p>Cancion favorita: "Old time road- Lil Nas X"</p>
-                <audio controls>
-                    <source type="audio/wav" src="music/lean.mp3">
-                </audio>
-            </div>
-        </div>
-        <div id="meji" class="members"> 
-            <img class="photos" id="member1Photo" alt="photo of member1" src="images/poquevola.jpg">
-            <div >
-                <h2>Mauro "Meji" Nicolás Álvarez</h2>
-                <p>Frase: "War never changes." </p>
-                <p>Cancion favorita: "Summer nights - Siames"</p>
-                <audio controls>
-                    <source type="audio/wav" src="music/meji.mp3">
-                </audio>
-            </div>
-        </div>
-        <div id="eri" class="members"> 
-            <img class="photos" id="member1Photo" alt="photo of member1" src="images/poquevola.jpg">
-            <div >
-                <h2>Erica "Eri" Soledad Curima</h2>
-                <p>Frase: "I try every day to change, even a little, to the world and, above all, resisting fiercely so that the world does not change me." </p>
-                <p>Cancion favorita: "Je veux - Zaz"</p>
-                <audio controls>
-                    <source type="audio/wav" src="music/eri.mp3">
-                </audio>
-            </div>
-        </div>
-        <div id="ivan" class="members"> 
-            <img class="photos" id="member1Photo" alt="photo of member1" src="images/poquevola.jpg">
-            <div >
-                <h2>Iván "Tati" De oli</h2>
-                <p>Frase:</p>
-                <p>Cancion favorita: "High Hopes - Pink Floyd"</p>
-                <audio controls>
-                    <source type="audio/wav" src="music/ivan.mp3">
-                </audio>
-            </div>
-        </div>
-        <div id="member6" class="members"> 
-            <img class="photos" id="member1Photo" alt="photo of member1" src="images/poquevola.jpg">
-            <div >
-                <h2>Román Díaz</h2>
-                <p>Frase: "We will were bond kicking and screaming until we learned to turn it down." </p>
-                <p>Cancion favorita: "The Phoenix- Fall out boys"</p>
-                <audio controls>
-                    <source type="audio/wav" src="music/roman.mp3">
-                </audio>
+                <h2>{{member.Fullname}}</h2>
+                <p>Phrase: "{{member.Phrase}}" </p>
+                <p>Cancion favorita: "{{member.Song}}"</p>
+                    <audio controls>
+                        <source type="audio/wav" :src="member.SongRute">
+                    </audio>
             </div>
         </div>
     </div>
 </main>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+<script src="js/main.js"></script>
 </body>
-
-    </html>
+</html>
